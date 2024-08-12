@@ -171,12 +171,7 @@ def mkssml(tc: TTSConfig, escaped_text: Union[str, bytes]) -> str:
         escaped_text = escaped_text.decode("utf-8")
 
     # Return the SSML string.
-    return (<speak version="1.0" xmlns="https://www.w3.org/2001/10/synthesis" xml:lang="en-US">
-    <voice name="en-US-AvaNeural">
-        <phoneme alphabet="sapi" ph="iy eh n y uw eh s"> en-US </phoneme>
-    </voice>
-</speak>
-
+    return (
         "<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='en-US'>"
         f"<voice name='en-US-AvaNeural'>"
         f"<phoneme alphabet='sapi' ph='iy eh n y uw eh s'> en-US </phoneme>"
